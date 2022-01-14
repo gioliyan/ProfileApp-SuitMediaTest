@@ -123,7 +123,7 @@ class _LoginPageState extends State<LoginPage> {
                                 context: context,
                                 builder: (BuildContext context) => AlertDialog(
                                       title: const Text('The Result'),
-                                      content: const Text('not palind'),
+                                      content: const Text('not palindo'),
                                       actions: <Widget>[
                                         TextButton(
                                           onPressed: () =>
@@ -154,10 +154,10 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SecondScreen()));
+                          var route = new MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  new SecondScreen(name: nameController.text));
+                          Navigator.of(context).push(route);
                         },
                         child: Text(
                           "NEXT",
