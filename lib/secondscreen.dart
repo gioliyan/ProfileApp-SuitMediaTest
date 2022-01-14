@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'loginpage.dart';
+import 'package:profileapplication/thirdscreen.dart';
 
 class SecondScreen extends StatefulWidget {
   final String name;
@@ -42,6 +42,38 @@ class _SecondScreenState extends State<SecondScreen> {
             child: Text(
               "${widget.name}",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Container(
+                  width: 300,
+                  height: 45,
+                  margin: EdgeInsets.only(top: 450),
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.cyan.shade900,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ThirdScreen()));
+                    },
+                    child: Text(
+                      "NEXT",
+                      style: TextStyle(
+                        color: Color(0xffffffff),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           )
         ],
