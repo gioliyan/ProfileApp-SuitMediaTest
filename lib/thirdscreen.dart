@@ -49,8 +49,8 @@ class _ThirdScreenState extends State<ThirdScreen> {
                 color: Colors.white,
                 elevation: 2.0,
                 child: ListTile(
-                  title:
-                      Text(data[position].fristname + data[position].lastname),
+                  title: Text(
+                      data[position].fristname + " " + data[position].lastname),
                   subtitle: Text(data[position].email),
                 ),
               );
