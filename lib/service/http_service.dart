@@ -20,5 +20,14 @@ class HttpService {
       print("fail");
       return null;
     }
+
+    // if (result.statusCode == HttpStatus.ok) {
+    //   print('sukses');
+    //   String response = result.body;
+    //   return response;
+    // } else {
+    //   print("fail");
+    //   return null;
+    // }
   }
 }

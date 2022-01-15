@@ -8,15 +8,15 @@ class ThirdScreen extends StatefulWidget {
 
 class _ThirdScreenState extends State<ThirdScreen> {
   int datasCount;
-  List datas;
+  List data;
   HttpService service;
 
   Future initialize() async {
-    datas = [];
-    datas = await service.getListData();
+    data = [];
+    data = await service.getListData();
     setState(() {
-      datasCount = datas.length;
-      datas = datas;
+      datasCount = data.length;
+      data = data;
     });
   }
 
@@ -49,9 +49,9 @@ class _ThirdScreenState extends State<ThirdScreen> {
                 color: Colors.white,
                 elevation: 2.0,
                 child: ListTile(
-                  title: Text(
-                      datas[position].fristname + datas[position].lastname),
-                  subtitle: Text(datas[position].email),
+                  title:
+                      Text(data[position].fristname + data[position].lastname),
+                  subtitle: Text(data[position].email),
                 ),
               );
             }));
